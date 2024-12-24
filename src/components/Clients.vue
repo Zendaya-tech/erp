@@ -409,17 +409,7 @@ interface ExtendedSale extends Sale {
 
 const clientSales = ref<ExtendedSale[]>([])
 
-const fetchClientSales = async (clientId: number) => {
-  try {
-    const sales = await getSalesByClientId(clientId)
-    clientSales.value = sales.map(sale => ({
-      ...sale,
-      items: sale.products
-    }))
-  } catch (error) {
-    console.error('Erreur lors de la récupération des ventes:', error)
-  }
-}
+
 
 // Methods
 const fetchData = async () => {

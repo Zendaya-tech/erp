@@ -107,7 +107,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { TransitionRoot, TransitionGroup } from '@headlessui/vue'
+import { TransitionRoot } from '@headlessui/vue'
 import { useNotificationStore } from '@/stores/notifications'
 import { useI18n } from 'vue-i18n'
 import {

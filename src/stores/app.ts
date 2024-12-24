@@ -8,9 +8,10 @@ interface AppConfig {
   currency: string
   language: string
   notifications: {
-    lowStock: boolean
-    newSale: boolean
-    reports: boolean
+    push: boolean
+    email: boolean
+    stock: boolean
+    sales: boolean
   }
 }
 
@@ -22,9 +23,10 @@ export const useAppStore = defineStore('app', () => {
     currency: 'EUR',
     language: 'fr',
     notifications: {
-      lowStock: true,
-      newSale: true,
-      reports: false,
+      push: true,
+      email: true,
+      stock: true,
+      sales: true,
     }
   })
 

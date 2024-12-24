@@ -56,13 +56,13 @@ export const useNotificationStore = defineStore('notifications', () => {
   const getNotificationType = (type: Notification['type']): keyof typeof appStore.config.notifications => {
     switch (type) {
       case 'warning':
-        return 'lowStock'
+        return 'stock'
       case 'success':
-        return 'newSale'
+        return 'sales'
       case 'info':
-        return 'reports'
+        return 'email'
       default:
-        return 'newSale'
+        return 'push'
     }
   }
 

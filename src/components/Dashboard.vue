@@ -355,22 +355,15 @@ const stats = ref([
   }
 ])
 
-const chartOptions = {
-  scales: {
-    y: {
-      beginAtZero: true,
-      grid: {
-        display: true,
-        color: 'rgba(0,0,0,0.1)'
-      }
-    },
-    x: {
-      grid: {
-        display: false
-      }
-    }
-  }
-} as const
+interface ChartOption {   
+  label: string
+  value: string
+}
+
+const chartOptions: ChartOption[] = [
+  { label: 'Nombre de Ventes', value: 'quantity' },
+  { label: 'Montant des Ventes', value: 'amount' }
+] as ChartOption[]
 
 const timeRange = ref('month')
 const activeChart = ref('quantity')
@@ -513,7 +506,6 @@ const renderChart = () => {
           beginAtZero: true,
           grid: {
             display: true,
-            drawBorder: false
           }
         },
         x: {

@@ -74,7 +74,7 @@
               v-model.number="saleQuantity"
               type="number"
               min="1"
-              :max="selectedProduct.quantity === -1 ? null : selectedProduct.quantity"
+              :max="selectedProduct.quantity === -1 ? undefined : selectedProduct.quantity"
               class="form-input"
             />
             <button @click="addToSale" class="btn-primary">
@@ -302,6 +302,7 @@ const completeSale = async () => {
         id: item.id,
         name: item.name,
         quantity: item.quantity,
+        price: item.price,
         totalPrice: item.totalPrice
       })),
       totalPrice: totalSalePrice.value,

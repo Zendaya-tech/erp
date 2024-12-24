@@ -1,12 +1,12 @@
 export interface Employee {
-  id?: number
+  id: number
   name: string
   role: string
   hoursWorked: number
 }
 
 export interface Product {
-  id?: number
+  id: number
   name: string
   quantity: number
   price: number
@@ -19,7 +19,7 @@ export interface Sale {
   date: string
   products: SaleItem[]
   totalPrice: number
-  client: string
+  client: string |null
 }
 
 export interface SaleItem {
@@ -27,6 +27,7 @@ export interface SaleItem {
   name: string
   quantity: number
   totalPrice: number
+  price: number
 }
 
 export interface Client {
@@ -37,7 +38,7 @@ export interface Client {
 }
 
 export interface Task {
-  id?: number
+  id: number
   title: string
   description: string
   status: 'To Do' | 'In Progress' | 'Done'
@@ -47,7 +48,7 @@ export interface Task {
 }
 
 export interface Order {
-  id?: number
+  id: number
   date: string
   product: Product
   quantity: number

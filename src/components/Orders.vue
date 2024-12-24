@@ -246,6 +246,7 @@ const { t } = useI18n()
 const orders = ref<Order[]>([])
 const products = ref<Product[]>([])
 const showAddModal = ref(false)
+const formErrors = ref<{ [key: string]: string }>({})
 
 // New order form
 const defaultOrder = {
