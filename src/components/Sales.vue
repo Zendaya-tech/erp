@@ -215,7 +215,7 @@ const stocks = ref<Product[]>([])
 const saleItems = ref<SaleItem[]>([])
 const selectedProduct = ref<Partial<Product>>({})
 const saleQuantity = ref(1)
-const clientName = ref('')
+const clientName = ref<string>('')
 const completedSales = ref<Sale[]>([])
 const clients = ref<Client[]>([])
 
@@ -224,9 +224,9 @@ const availableProducts = computed(() =>
   stocks.value.filter(p => p.quantity === -1 || p.quantity > 0)
 )
 
-const totalSalePrice = computed(() =>
-  saleItems.value.reduce((total, item) => total + item.totalPrice, 0)
-)
+const totalSalePrice = computed((): number => {
+  return saleItems.value.reduce((total, item) => total + item.totalPrice, 0)
+})
 
 const todaysSales = computed(() => {
   const today = new Date().toDateString()
@@ -298,20 +298,16 @@ const completeSale = async () => {
   try {
     const sale: Sale = {
       date: new Date().toISOString(),
-      products: saleItems.value,
+      products: saleItems.value.map(item => ({
+        id: item.id,
+        name: item.name,
+        quantity: item.quantity,
+        totalPrice: item.totalPrice
+      })),
       totalPrice: totalSalePrice.value,
       client: clientName.value || null
     }
-
-    // Update stock quantities
-    for (const item of saleItems.value) {
-      const product = stocks.value.find(p => p.id === item.id)
-      if (product && product.quantity !== -1) {
-        product.quantity -= item.quantity
-        await updateStockInDB(product.id!, product)
-      }
-    }
-
+    
     await addSaleToDB(sale)
     await fetchData()
 

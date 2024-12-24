@@ -218,4 +218,24 @@ const removeLogo = () => {
 onMounted(() => {
   locale.value = appStore.config.language
 })
+
+interface NotificationSettings {
+  lowStock: boolean
+  newSale: boolean
+  reports: boolean
+  email: boolean
+  push: boolean
+  stock: boolean
+  sales: boolean
+}
+
+const notifications = ref<NotificationSettings>({
+  lowStock: true,
+  newSale: true,
+  reports: true,
+  email: true,
+  push: true,
+  stock: true,
+  sales: true
+})
 </script>

@@ -200,8 +200,10 @@ const addNewProduct = async () => {
 
 // Update product
 const updateStock = async (id: number, updatedProduct: Product) => {
-  await updateStockInDB(id, updatedProduct)
-  fetchStocks()
+  if (id) {
+    await updateStockInDB(id, updatedProduct)
+    fetchStocks()
+  }
 }
 
 // Remove product

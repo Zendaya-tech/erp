@@ -1,5 +1,5 @@
 import { openDB } from 'idb'
-import type { Employee, Product, Sale, Client, Task, Order } from '../types'
+import type { Employee, Product, Sale, Client, Task, Order, SaleItem } from '../types'
 
 // Initialize IndexedDB
 export const initDB = async () => {
@@ -84,20 +84,23 @@ export const deleteStockFromDB = async (id: number) => {
 /* --- Sales Functions --- */
 
 // Add sale
-export const addSaleToDB = async (sale: Sale) => {
+export const addSaleToDB = async (sale: Sale): Promise<void> => {
   const db = await initDB()
-  // Ensure the sale object is serializable
-  const serializedSale = {
+  const tx = db.transaction('sales', 'readwrite')
+  const store = tx.objectStore('sales')
+  
+  const saleToAdd = {
     ...sale,
-    products: sale.products.map(product => ({
-      id: product.id,
-      name: product.name,
-      quantity: product.quantity,
-      price: product.price,
-      totalPrice: product.totalPrice
+    products: sale.products.map(item => ({
+      id: item.id,
+      name: item.name,
+      quantity: item.quantity,
+      price: item.totalPrice / item.quantity,
+      totalPrice: item.totalPrice
     }))
   }
-  await db.add('sales', serializedSale)
+  
+  await store.add(saleToAdd)
 }
 
 // Get all sales

@@ -398,12 +398,28 @@ const paginatedClients = computed(() => {
   return filteredClients.value.slice(start, start + itemsPerPage)
 })
 
-const clientSales = computed(() => {
-  if (!selectedClient.value) return []
-  return sales.value
-    .filter(sale => sale.client === selectedClient.value?.code)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-})
+interface ExtendedSale extends Sale {
+  items: {
+    id: number
+    name: string
+    quantity: number
+    totalPrice: number
+  }[]
+}
+
+const clientSales = ref<ExtendedSale[]>([])
+
+const fetchClientSales = async (clientId: number) => {
+  try {
+    const sales = await getSalesByClientId(clientId)
+    clientSales.value = sales.map(sale => ({
+      ...sale,
+      items: sale.products
+    }))
+  } catch (error) {
+    console.error('Erreur lors de la récupération des ventes:', error)
+  }
+}
 
 // Methods
 const fetchData = async () => {

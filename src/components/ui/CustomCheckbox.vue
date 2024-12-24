@@ -73,7 +73,14 @@ defineProps<{
   modelValue: boolean
 }>()
 
-defineEmits<{
-  'update:modelValue': [value: boolean]
+const emit = defineEmits<{
+  (e: 'update:modelValue', value: boolean): void
 }>()
+
+const handleChange = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  if (target) {
+    emit('update:modelValue', target.checked)
+  }
+}
 </script> 

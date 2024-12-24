@@ -136,7 +136,7 @@
               <td>
                 <select
                   v-model="task.status"
-                  @change="updateTask(task)"
+                  @change="updateTaskStatus(task.id!, task)"
                   class="form-select"
                 >
                   <option value="To Do">{{ t('planning.stats.todo') }}</option>
@@ -395,6 +395,17 @@ const formatDate = (isoString: string) => {
     month: 'long',
     day: 'numeric',
   })
+}
+
+const updateTaskStatus = async (taskId: number, task: Task) => {
+  if (taskId) {
+    try {
+      await updateTaskInDB(taskId, task)
+      await fetchTasks()
+    } catch (error) {
+      console.error('Erreur lors de la mise à jour de la tâche:', error)
+    }
+  }
 }
 
 // Initialize
