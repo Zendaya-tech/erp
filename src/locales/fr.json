@@ -1,0 +1,397 @@
+{
+  "settingsTitle": "Paramètres de l'application",
+  "theme": "Thème de l'application",
+  "currency": "Devise",
+  "businessName": "Nom de l'entreprise",
+  "businessDescription": "Description de l'entreprise",
+  "language": "Langue",
+  "saveButton": "Enregistrer les paramètres",
+  "light": "Clair",
+  "dark": "Sombre",
+  
+  "notifications": {
+    "title": "Notifications",
+    "clearAll": "Tout effacer",
+    "empty": "Aucune notification",
+    "settings": {
+      "lowStock": "Alertes de stock bas",
+      "lowStockDesc": "Recevez une notification lorsqu'un produit est presque en rupture de stock",
+      "newSale": "Nouvelles ventes",
+      "newSaleDesc": "Soyez notifié pour chaque nouvelle vente",
+      "reports": "Rapports hebdomadaires",
+      "reportsDesc": "Recevez un résumé hebdomadaire de votre activité"
+    }
+  },
+
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "inventory": "Gestion des stocks",
+    "planning": "Planning",
+    "clients": "Gestion des clients",
+    "sales": "Ventes",
+    "hr": "Ressources Humaines",
+    "settings": "Paramètres",
+    "home": "Accueil",
+    "orders": "Commandes"
+  },
+
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "add": "Ajouter",
+    "search": "Rechercher",
+    "filter": {
+      "all": "Tous"
+    },
+    "actions": "Actions",
+    "confirm": "Confirmer",
+    "loading": "Chargement...",
+    "showing": "Affichage de {current} sur {total} {item}",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "update": "Mettre à jour",
+    "products": "produits"
+  },
+
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "stats": {
+      "totalSales": "Ventes Totales",
+      "newCustomers": "Nouveaux Clients",
+      "productsInStock": "Produits en Stock",
+      "pendingOrders": "Commandes en Attente",
+      "vsLastMonth": "vs mois précédent"
+    },
+    "chart": {
+      "salesCount": "Nombre de Ventes",
+      "salesAmount": "Montant des Ventes",
+      "timeRanges": {
+        "today": "Aujourd'hui",
+        "week": "Cette semaine",
+        "month": "Ce mois",
+        "year": "Cette année"
+      }
+    },
+    "recentSales": {
+      "title": "Ventes Récentes",
+      "products": "produits",
+      "noSales": "Aucune vente récente"
+    },
+    "stockAlerts": {
+      "title": "Alertes Stock",
+      "lowStock": "Stock bas",
+      "units": "unités",
+      "reorder": "Commander",
+      "noAlerts": "Aucune alerte de stock bas",
+      "success": "Commande créée avec succès",
+      "error": "Erreur lors de la création de la commande"
+    },
+    "story": {
+      "welcome": "Bienvenue sur SIRIUS par Zendaya",
+      "description": "SIRIUS est un logiciel de gestion d'entreprise open source créé par Zendaya. Notre mission est de fournir des outils professionnels gratuits et accessibles à tous, tout en innovant constamment pour l'avenir du commerce.",
+      "tagline": "Innovons ensemble pour un commerce plus intelligent"
+    },
+    "products": {
+      "title": "Découvrez nos prochaines innovations",
+      "comingSoon": "Bientôt disponible",
+      "learnMore": "En savoir plus",
+      "analytics": "Une suite d'analyse avancée pour des décisions éclairées",
+      "mobile": "Gérez votre entreprise depuis votre smartphone",
+      "cloud": "Solutions cloud pour une scalabilité sans limites"
+    }
+  },
+
+  "inventory": {
+    "title": "Gestion des Stocks",
+    "stockList": {
+      "title": "Produits en stock"
+    },
+    "table": {
+      "name": "Nom du produit",
+      "quantity": "Quantité",
+      "price": "Prix",
+      "type": "Type",
+      "addDate": "Date d'ajout"
+    },
+    "type": {
+      "product": "Produit",
+      "service": "Service"
+    },
+    "unlimited": "Illimité",
+    "addProduct": {
+      "title": "Ajouter un produit",
+      "submit": "Ajouter"
+    },
+    "form": {
+      "name": "Nom du produit",
+      "quantity": "Quantité",
+      "price": "Prix (€)",
+      "type": "Type",
+      "isService": "C'est un service",
+      "namePlaceholder": "Nom du produit",
+      "quantityPlaceholder": "Quantité",
+      "pricePlaceholder": "Prix"
+    },
+    "validation": {
+      "nameRequired": "Veuillez remplir tous les champs correctement."
+    },
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce produit ?"
+  },
+
+  "clients": {
+    "title": "Gestion des Clients",
+    "stats": {
+      "totalClients": "Total Clients",
+      "newClients": "Nouveaux Clients",
+      "activeClients": "Clients Actifs"
+    },
+    "search": "Rechercher un client...",
+    "filter": {
+      "all": "Tous les genres",
+      "male": "Hommes",
+      "female": "Femmes"
+    },
+    "addClient": "Nouveau Client",
+    "table": {
+      "code": "Code",
+      "lastName": "Nom",
+      "firstName": "Prénom",
+      "gender": "Genre",
+      "purchases": "Achats"
+    },
+    "form": {
+      "code": "Code Client",
+      "lastName": "Nom",
+      "firstName": "Prénom",
+      "gender": "Genre",
+      "male": "Homme",
+      "female": "Femme",
+      "autoGenerated": "Code généré automatiquement",
+      "addSuccess": "Client ajouté avec succès",
+      "updateSuccess": "Client mis à jour avec succès",
+      "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce client ?",
+      "new": "Nouveau client",
+      "edit": "Modifier le client",
+      "changeLogo": "Changer le logo",
+      "remove": "Supprimer",
+      "validation": {
+        "codeRequired": "Le code client est requis",
+        "codeExists": "Ce code client existe déjà",
+        "firstNameRequired": "Le prénom est requis",
+        "lastNameRequired": "Le nom est requis"
+      }
+    },
+    "details": {
+      "title": "Détails du client",
+      "personalInfo": "Informations personnelles",
+      "purchaseHistory": "Historique des achats",
+      "products": "produits",
+      "close": "Fermer",
+      "purchaseDate": "Date d'achat",
+      "purchaseAmount": "Montant",
+      "purchaseCount": "{count} achats - {amount}"
+    }
+  },
+
+  "sales": {
+    "title": "Gestion des Ventes",
+    "stats": {
+      "todaySales": "Ventes du jour",
+      "productsSold": "Produits Vendus",
+      "customersServed": "Clients Servis"
+    },
+    "newSale": {
+      "title": "Nouvelle Vente",
+      "selectProduct": "Sélectionner un produit",
+      "quantity": "Quantité",
+      "add": "Ajouter",
+      "client": "Client",
+      "cart": "Panier",
+      "total": "Total",
+      "finalize": "Finaliser la vente",
+      "success": "Vente enregistrée avec succès",
+      "selectClient": "Sélectionner un client",
+      "error": "Erreur lors de l'enregistrement de la vente",
+      "cartEmpty": "Le panier est vide",
+      "clientRequired": "Veuillez sélectionner un client",
+      "productOutOfStock": "Produit en rupture de stock",
+      "insufficientStock": "Stock insuffisant",
+      "unitPrice": "Prix unitaire",
+      "subtotal": "Sous-total",
+      "removeItem": "Retirer du panier",
+      "unlimited": "Illimité"
+    },
+    "anonymous": "Client Anonyme"
+  },
+
+  "planning": {
+    "title": "Planning",
+    "stats": {
+      "todo": "À faire",
+      "inProgress": "En cours",
+      "done": "Terminées"
+    },
+    "addTask": "Nouvelle Tâche",
+    "taskList": "Liste des Tâches",
+    "filters": {
+      "reset": "Réinitialiser les filtres"
+    },
+    "search": {
+      "byTag": "Rechercher par tag"
+    },
+    "priority": {
+      "low": "Faible",
+      "medium": "Moyenne",
+      "high": "Haute"
+    },
+    "form": {
+      "title": "Titre",
+      "description": "Description",
+      "status": "Statut",
+      "priority": "Priorité",
+      "deadline": "Échéance",
+      "tags": "Tags"
+    },
+    "modal": {
+      "newTask": "Nouvelle Tâche",
+      "editTask": "Modifier la Tâche"
+    },
+    "tags": {
+      "enterToAdd": "Appuyez sur Entrée pour ajouter"
+    },
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette tâche ?"
+  },
+
+  "hr": {
+    "title": "Ressources Humaines",
+    "stats": {
+      "totalStaff": "Effectif Total",
+      "totalHours": "Heures Totales",
+      "activeRoles": "Rôles Actifs"
+    },
+    "addEmployee": "Nouvel Employé",
+    "table": {
+      "name": "Nom",
+      "role": "Rôle",
+      "hoursWorked": "Heures travaillées"
+    }
+  },
+
+  "validation": {
+    "required": "Ce champ est requis",
+    "email": "Email invalide",
+    "min": "Minimum {n} caractères",
+    "max": "Maximum {n} caractères",
+    "numeric": "Doit être un nombre",
+    "positive": "Doit être positif",
+    "unique": "Cette valeur existe déjà",
+    "date": "Date invalide"
+  },
+
+  "app": {
+    "name": "SIRIUS",
+    "description": "Système de Gestion d'Entreprise",
+    "version": "Version 1.0.0",
+    "poweredBy": "Propulsé par Zendaya"
+  },
+
+  "settings": {
+    "title": "Paramètres",
+    "general": {
+      "title": "Paramètres Généraux",
+      "theme": "Thème",
+      "language": "Langue",
+      "currency": "Devise"
+    },
+    "business": {
+      "title": "Informations de l'Entreprise",
+      "name": "Nom de l'entreprise",
+      "description": "Description",
+      "logo": {
+        "title": "Logo de l'entreprise",
+        "upload": "Télécharger un logo",
+        "remove": "Supprimer le logo",
+        "preview": "Aperçu du logo"
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "email": "Notifications par email",
+      "push": "Notifications push",
+      "stock": "Alertes de stock bas",
+      "sales": "Rapports de ventes",
+      "emailDescription": "Recevez des notifications par email",
+      "pushDescription": "Recevez des notifications sur votre navigateur",
+      "stockDescription": "Soyez notifié quand un produit est presque en rupture",
+      "salesDescription": "Recevez des rapports hebdomadaires de vos ventes"
+    },
+    "save": "Enregistrer les modifications",
+    "success": "Paramètres enregistrés avec succès",
+    "error": "Erreur lors de l'enregistrement des paramètres",
+    "themes": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système",
+      "darkDescription": "Mode sombre activé pour réduire la fatigue oculaire",
+      "lightDescription": "Mode clair pour une meilleure visibilité en journée",
+      "systemDescription": "Suit les préférences de votre système"
+    }
+  },
+
+  "orders": {
+    "title": "Commandes",
+    "stats": {
+      "pending": "En attente",
+      "confirmed": "Confirmées",
+      "delivered": "Livrées",
+      "cancelled": "Annulées"
+    },
+    "list": {
+      "title": "Liste des commandes"
+    },
+    "table": {
+      "date": "Date",
+      "product": "Produit",
+      "quantity": "Quantité",
+      "total": "Total",
+      "status": "Statut",
+      "delivery": "Livraison prévue"
+    },
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    },
+    "actions": {
+      "new": "Nouvelle commande",
+      "confirm": "Confirmer",
+      "deliver": "Marquer comme livrée",
+      "cancel": "Annuler"
+    },
+    "modal": {
+      "title": "Nouvelle commande"
+    },
+    "form": {
+      "product": "Produit",
+      "selectProduct": "Sélectionner un produit",
+      "quantity": "Quantité",
+      "supplier": "Fournisseur",
+      "expectedDelivery": "Date de livraison prévue",
+      "notes": "Notes",
+      "total": "Total"
+    },
+    "validation": {
+      "required": "Veuillez remplir tous les champs requis",
+      "cannotOrder": "Impossible de commander un produit illimité ou un service"
+    },
+    "confirmation": {
+      "confirmed": "Êtes-vous sûr de vouloir confirmer cette commande ?",
+      "delivered": "Êtes-vous sûr de vouloir marquer cette commande comme livrée ?",
+      "cancelled": "Êtes-vous sûr de vouloir annuler cette commande ?"
+    }
+  }
+}
